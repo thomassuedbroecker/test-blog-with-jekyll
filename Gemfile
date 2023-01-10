@@ -4,4 +4,4 @@ source "https://rubygems.org"
 # gemspec
 
 # gem "rails"
-gem "jekyll"
+gem 'jekyll', '~> 4.2'
