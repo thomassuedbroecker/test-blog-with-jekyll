@@ -1,4 +1,4 @@
-name: Build and Deploy simple example
+name: Build and deploy example
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
       - gh-pages
 
 jobs:
-  deploy_demo_site:
+  deploy_example_site:
     runs-on: "ubuntu-latest"
     env:
       BUNDLE_PATH: "vendor/bundle"
@@ -17,12 +17,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
         with:
-          repository: jekyll/minima
+          repository: thomassuedbroecker/test-blog-with-jekyll
           ref: gh-pages
-      - name: Set up Ruby 2.7
+      - name: Set up Ruby 4.0
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7
+          ruby-version: 4.0
           bundler-cache: true
       - name: Clone target branch
         run: |
