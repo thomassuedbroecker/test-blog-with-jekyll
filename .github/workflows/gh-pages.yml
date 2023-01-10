@@ -19,10 +19,10 @@ jobs:
         with:
           repository: thomassuedbroecker/test-blog-with-jekyll
           ref: gh-pages
-      - name: Set up Ruby 4.0
+      - name: Set up Ruby 3.0
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 4.0
+          ruby-version: 3.0
           bundler-cache: true
       - name: Clone target branch
         run: |
