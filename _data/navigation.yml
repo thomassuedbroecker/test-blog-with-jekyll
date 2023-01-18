@@ -1,0 +1,4 @@
+- name: HomeData
+  link: /
+- name: AboutData
+  link: /about.html
