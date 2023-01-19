@@ -1,4 +1,4 @@
-name: test-blog-with-jekyll-action
+name: test-blog-with-jekyll-action-01
 run-name: ${{ github.actor }} is deploying test-blog-with-jekyll-action with GitHub Actions
 on:
   push:
