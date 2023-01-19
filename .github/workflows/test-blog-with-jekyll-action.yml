@@ -22,7 +22,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.0.0' # Not needed with a .ruby-version file
-       - name: 3-Add specific bundler
+      - name: 3-Add specific bundler
         run: bundle lock --add-platform x86_64-linux
       - name: 4-Run bundle install
         run: bundle install
