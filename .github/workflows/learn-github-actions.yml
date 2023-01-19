@@ -18,7 +18,9 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.0.0' # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      #    bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      - name: 3-Run specific bundler
+        run: bundle lock --add-platform x86_64-linux
       #  run: apt install ruby-full
       #- name: 3-Setup Pages
       #  id: pages
