@@ -12,19 +12,19 @@ jobs:
   my-deployment:
     runs-on: ubuntu-latest
     steps:
-      - name: 1. Checkout
+      - name: 1-Checkout
         uses: actions/checkout@v3
-      - name: 2. Setup Ruby
+      - name: 2-Setup Ruby
         run: apt install ruby-full
-      - name: 3. Setup Pages
+      - name: 3-Setup Pages
         id: pages
-      - name: 4. Build with Jekyll
+      - name: 4-Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
         uses: actions/configure-pages@v2
-      - name: 5. Upload artifact
+      - name: 5-Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v1
 
