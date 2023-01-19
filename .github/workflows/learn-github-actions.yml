@@ -15,9 +15,9 @@ jobs:
       - name: 1-Checkout
         uses: actions/checkout@v3
       - name: 2-Setup Ruby
-        uses: ruby/setup-ruby@v3
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.0' # Not needed with a .ruby-version file
+          ruby-version: '3.0.0' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
       #  run: apt install ruby-full
       #- name: 3-Setup Pages
