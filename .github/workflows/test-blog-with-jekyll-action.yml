@@ -33,9 +33,11 @@ jobs:
          echo "Envionment: $JEKYLL_ENV"
          pwd
          bundle exec jekyll build
+         echo "List source files"
          ls
-        env:
-          JEKYLL_ENV: production
+         echo "Site configuration"
+         cd $(pwd)/_site
+         ls
       - name: 6-configure pages
         uses: actions/configure-pages@v2
       - name: 7-Upload artifact
