@@ -30,12 +30,13 @@ jobs:
         # Outputs to the './_site' directory by default
         # run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         run: |
-         echo "Envionment: $JEKYLL_ENV"
          pwd
+         echo "** Build"
          bundle exec jekyll build
-         echo "List source files"
+         echo "** List source files"
          ls
-         echo "Site configuration"
+         echo "** Site configuration"
+         cp 
          cd $(pwd)/_site
          ls
       - name: 6-configure pages
@@ -58,3 +59,7 @@ jobs:
       - name: 1-Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+      - name: 2-Verify
+        run: |
+         pwd
+         ls
