@@ -1,6 +1,9 @@
 name: test-blog-with-jekyll-action
-run-name: ${{ github.actor }} is learning GitHub Actions
-on: [push]
+run-name: ${{ github.actor }} is deploying test-blog-with-jekyll-action with GitHub Actions
+on:
+  push:
+    branches:
+      - main
 permissions:
   contents: read
   pages: write
