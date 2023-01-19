@@ -36,7 +36,7 @@ jobs:
          echo "** List source files"
          ls
          echo "** Site configuration"
-         cp 
+         cp -r $(pwd)/action $(pwd)/_site
          cd $(pwd)/_site
          ls
       - name: 6-configure pages
