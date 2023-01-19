@@ -1,6 +1,6 @@
 - name: /HomeData
-  link: /test-blog-with-jekyll/
+  link: /
 - name: AboutData
-  link: test-blog-with-jekyll/about.html
+  link: /about.html
 - name: Blog
-  link: /test-blog-with-jekyll/blog.html
+  link: /blog.html
