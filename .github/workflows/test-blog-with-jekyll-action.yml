@@ -1,4 +1,4 @@
-name: learn-github-actions
+name: test-blog-with-jekyll-action
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 permissions:
@@ -24,9 +24,6 @@ jobs:
         run: bundle lock --add-platform x86_64-linux
       - name: 4-Run bundle install
         run: bundle install
-      #  run: apt install ruby-full
-      #- name: 3-Setup Pages
-      #  id: pages
       - name: 5-Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
@@ -46,6 +43,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
+      - name: 1-Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
