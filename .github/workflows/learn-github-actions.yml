@@ -16,8 +16,8 @@ jobs:
         uses: actions/checkout@v3
       - name: 2-Setup Ruby
         run: apt install ruby-full
-      - name: 3-Setup Pages
-        id: pages
+      #- name: 3-Setup Pages
+      #  id: pages
       - name: 4-Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
