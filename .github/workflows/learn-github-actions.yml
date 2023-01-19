@@ -23,8 +23,9 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      - name: 5-configure pages
         uses: actions/configure-pages@v2
-      - name: 5-Upload artifact
+      - name: 6-Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v1
 
