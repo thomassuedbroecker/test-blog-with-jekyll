@@ -22,8 +22,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.0.0' # Not needed with a .ruby-version file
-      #    bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-      - name: 3-Add specific bundler
+       - name: 3-Add specific bundler
         run: bundle lock --add-platform x86_64-linux
       - name: 4-Run bundle install
         run: bundle install
@@ -40,11 +39,14 @@ jobs:
 
   # Deployment job
   deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
     steps:
       - name: 1-Deploy to GitHub Pages
         id: deployment
