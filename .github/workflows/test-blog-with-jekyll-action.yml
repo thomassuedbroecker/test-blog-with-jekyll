@@ -29,10 +29,11 @@ jobs:
       - name: 5-Build with Jekyll
         # Outputs to the './_site' directory by default
         # run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        # bundle exec jekyll build
         run: |
          pwd
          echo "** Build"
-         bundle exec jekyll build
+         bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
          echo "** List source files"
          ls
          echo "** Site configuration"
@@ -65,4 +66,4 @@ jobs:
       - name: 2-Verify
         run: |
          pwd
-         
+
