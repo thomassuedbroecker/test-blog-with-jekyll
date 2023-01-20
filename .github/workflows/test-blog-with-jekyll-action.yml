@@ -64,5 +64,5 @@ jobs:
         uses: actions/deploy-pages@v1
       - name: 2-Verify
         run: |
-         pwd 
-         ls
+         pwd
+         
