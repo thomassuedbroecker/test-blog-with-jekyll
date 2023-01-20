@@ -4,4 +4,5 @@
 # url: https://test-blog-with-jekyll.github.io  
 url: ''
 # place folder name if the site is served in a subfolder
-baseurl: /test-blog-with-jekyll 
+# baseurl: /test-blog-with-jekyll
+baseurl: ''
