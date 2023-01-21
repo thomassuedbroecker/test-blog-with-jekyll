@@ -6,4 +6,4 @@ url: ""
 # place folder name if the site is served in a subfolder
 # baseurl: /test-blog-with-jekyll
 baseurl: ""
-ignore_theme_config: true
+#ignore_theme_config: true

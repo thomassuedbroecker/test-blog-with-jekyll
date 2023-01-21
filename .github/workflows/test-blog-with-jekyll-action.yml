@@ -35,7 +35,8 @@ jobs:
          echo "** Build"
          echo "** Path: ${{ steps.pages.outputs.base_path }}"
          # bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-         bundle exec jekyll build --incremental --config _config.yml
+         # bundle exec jekyll build --incremental --config _config.yml
+         bundle exec jekyll build
          echo "** List source files"
          ls
          echo "** Site configuration"
