@@ -1,9 +1,11 @@
 # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
-# domain: test-blog-with-jekyll.github.io       
+domain: thomassuedbroecker.github.io       
 # the base hostname and protocol for your site, e.g. http://example.com
-# url: https://test-blog-with-jekyll.github.io  
-url: ""
+url: "https://thomassuedbroecker.github.io"
 # place folder name if the site is served in a subfolder
-# baseurl: /test-blog-with-jekyll
-baseurl: ""
-#ignore_theme_config: true
+baseurl: "/test-blog-with-jekyll"
+ignore_theme_config: true
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag

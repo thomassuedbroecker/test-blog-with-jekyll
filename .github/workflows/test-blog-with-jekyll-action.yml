@@ -28,8 +28,6 @@ jobs:
         run: bundle install
       - name: 5-Build with Jekyll
         # Outputs to the './_site' directory by default
-        # run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-        # bundle exec jekyll build
         run: |
          pwd
          echo "** Build"
@@ -60,7 +58,6 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-#      url: ${{ steps.deployment.outputs.page_url }}
       url: ${{ steps.deployment.outputs.page_url }} 
     steps:
       - name: 1-Deploy to GitHub Pages
